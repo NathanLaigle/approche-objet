@@ -1,6 +1,6 @@
 package fr.diginamic.shape;
 
-public class Rectangle implements ObjetGeometrique {
+public class Rectangle extends Shape {
 
 	public Rectangle(double length, double height) {
 		this.height = height;
