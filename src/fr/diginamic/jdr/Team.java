@@ -65,6 +65,7 @@ public class Team {
 			if(this.getPotions() > 0) {
 				this.team[pokemonTrainerTeamIndex].heal(10);
 				System.out.println("A potion has been used ! " + this.getTeam()[pokemonTrainerTeamIndex].name + " seems to be better now !");
+				this.potions --;
 			} else {
 				System.out.println("You do not have any potions");
 			}

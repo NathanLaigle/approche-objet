@@ -8,7 +8,7 @@ public class Gyarados extends Pokemon {
 		super("Gyarados");
 
 		this.minAttack = 12;
-		this.maxAttack = 13;
+		this.maxAttack = 14;
 
 		this.minLife = 20;
 		this.maxLife = 30;
