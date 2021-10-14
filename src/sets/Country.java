@@ -1,6 +1,6 @@
 package sets;
 
-public class Country {
+public class Country implements Comparable<Country> {
 
 	public Country(String name, int inhabitants, double GPD) {
 		this.name = name;
@@ -34,6 +34,10 @@ public class Country {
 	
 	public double getGDPByInhabitants() {
 		return this.GDP / this.inhabitants;
+	}
+	
+	public int compareTo(Country o) {
+		return this.name.compareTo(o.name);
 	}
 
 	private String name;
