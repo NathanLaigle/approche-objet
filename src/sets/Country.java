@@ -36,8 +36,14 @@ public class Country implements Comparable<Country> {
 		return this.GDP / this.inhabitants;
 	}
 	
+	/*
 	public int compareTo(Country o) {
 		return this.name.compareTo(o.name);
+	}
+	*/
+	
+	public int compareTo(Country o) {
+		return o.getInhabitants() - this.inhabitants ;
 	}
 
 	private String name;
