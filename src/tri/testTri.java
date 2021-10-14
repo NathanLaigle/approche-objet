@@ -11,7 +11,7 @@ public class testTri {
 	public static void main(String[] args) {
 		List<Country> list = new ArrayList<Country>();
 		Collections.addAll(list, new Country("Usa", 12, 12), new Country("France", 10, 10));
-		Collections.sort(list);
+		Collections.sort(list, new ComparatorNom());
 		System.out.println("Sorted list :");
 		for (Country c : list) {
 			System.out.println(c.getName());
