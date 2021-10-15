@@ -81,7 +81,25 @@ public class Application {
 		// same thing with France :
 		// --------------------------
 		
-		// ...
+		int franceInhabitant = 0;
+		
+		for(City c : cities) {
+				franceInhabitant += c.getInhabitant();
+		}
+		Collections.sort(cities, new Comparator<City>() {
+			public int compare(City c1, City c2) {
+				return c1.getInhabitant() - c2.getInhabitant();
+			}
+		});
+		
+		for(int i = 0; i < 10; i++) {
+			// System.out.println(cities.get(i).toString());
+		}
+		
+		for(int i = cities.size() - 1; i > cities.size() - 11; i--) {
+			// System.out.println(cities.get(i).toString());
+		}
+		
 	}
 
 }
