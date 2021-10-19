@@ -1,5 +1,7 @@
 package fr.diginamic.recensement;
 
+import java.util.Objects;
+
 public class City {
 	private int regionCode;
 	private String regionName;
@@ -27,6 +29,28 @@ public class City {
 		return "Region : " + this.regionName + " - " + this.regionCode + " | Department : " + this.departmentName
 				+ " - " + this.departmentCode + " | Municipality : " + this.municipalityName + " - "
 				+ this.municipalityCode + " | Inhabitants : " + this.inhabitant;
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(departmentCode, departmentName, inhabitant, municipalityCode, municipalityName, regionCode,
+				regionName);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		City other = (City) obj;
+		return Objects.equals(departmentCode, other.departmentCode)
+				&& Objects.equals(departmentName, other.departmentName) && inhabitant == other.inhabitant
+				&& municipalityCode == other.municipalityCode
+				&& Objects.equals(municipalityName, other.municipalityName) && regionCode == other.regionCode
+				&& Objects.equals(regionName, other.regionName);
 	}
 
 	public int getRegionCode() {
